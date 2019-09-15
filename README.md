@@ -1,11 +1,18 @@
 # React Hooks Cheatsheet
 
+- [Overview](##Overview)
+- [Rules/Guidelines](##Rules/Guidelines)
+- [The "useState" Hook](##The%20"useState"%20Hook)
+- [The "useEffect" Hook](##The%20"useEffect"%20Hook)
+- [Custom Hooks](##Custom%20Hooks)
+
 ## Overview
 React (v16.8+) Hooks let you use state and lifecycle methods in function components (now formerly known as "stateless components").
 
 Function components need to return a JSX element
 
     const MyComponent = (props) => {
+      // hook calls will go here
       return (
         <div>Hello World</div>
       );
