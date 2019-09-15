@@ -62,7 +62,7 @@ The useEffect hook adds lifecycle functionality to function components
 
 - The "effect" will run ***after*** the DOM has rendered
 
-- useEffect can have a second parameter which should be an array of state variables, that means the "effect" will only run when the specified state variable(s) has changed
+- useEffect can have a second parameter (known as a "dependency") which should be an array of state variables and/or props, that means the "effect" will only run when the specified state or props variable(s) has changed
 
       const [title, setTitle] = useState('Hello');
       useEffect(() => {
