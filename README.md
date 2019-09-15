@@ -1,11 +1,12 @@
 # React Hooks Cheatsheet
 
-- [Overview](##Overview)
-- [Rules/Guidelines](##Rules/Guidelines)
-- [The "useState" Hook](##The%20"useState"%20Hook)
-- [The "useEffect" Hook](##The%20"useEffect"%20Hook)
-- [Custom Hooks](##Custom%20Hooks)
+- [Overview](#headers)
+- [Rules/Guidelines](#rules)
+- [The "useState" Hook](#usestate)
+- [The "useEffect" Hook](#useeffect)
+- [Custom Hooks](#customhooks)
 
+<a name="headers"></a>
 ## Overview
 React (v16.8+) Hooks let you use state and lifecycle methods in function components (now formerly known as "stateless components").
 
@@ -18,11 +19,13 @@ Function components need to return a JSX element
       );
     }
 
+<a name="rules"></a>
 ## Rules/Guidelines
 - Hooks ***must*** be called in the top level of a function component or custom hook, not inside a loop or condition
 
 - Hooks are just JS functions, but by convention their names should always start with a lowercase `use`
 
+<a name="usestate"></a>
 ## The "useState" Hook
 The useState hook allows a function component to have state
 
@@ -44,6 +47,7 @@ The useState hook allows a function component to have state
 
 - State variables can be arrays or objects
 
+<a name="useeffect"></a>
 ## The "useEffect" Hook
 The useEffect hook adds lifecycle functionality to function components
 
@@ -86,6 +90,7 @@ The useEffect hook adds lifecycle functionality to function components
         }
       }, [value]);
 
+<a name="customhooks"></a>
 ## Custom Hooks
 If there is complicated state or lifecycle logic that is used by multiple components, it can be placed into one function aka hook. This does ***NOT*** mean components share state with each other between the custom hook, only that they reuse the logic. This makes it so you don't have to write duplicate logic for each component.
 
