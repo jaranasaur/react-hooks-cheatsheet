@@ -47,6 +47,14 @@ The useState hook allows a function component to have state
 
 - State variables can be arrays or objects
 
+- Passing a single parameter function to the state setter gives you access to the previous state. That function must return the new state
+
+      const [age, setAge] = useState(46);
+      ...
+      const onBirthday = () => {
+        setName(previousAge => previousAge + 1);
+      }
+
 <a name="useeffect"></a>
 ## The "useEffect" Hook
 The useEffect hook adds lifecycle functionality to function components
