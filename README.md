@@ -40,19 +40,19 @@ The useState hook allows a function component to have state
 
 - Passing a value to useState will set the initial state variable to that value (otherwise it will init to 'undefined')
 
-- If you need multiple state values, just call use state multiple times
+- If you need multiple state values, just call `useState` multiple times
 
       const [name, setName] = useState('Doug');
       const [age, setAge] = useState(46);
 
 - State variables can be arrays or objects
 
-- Passing a single parameter function to the state setter gives you access to the previous state. That function must return the new state
+- Passing a single parameter function to the state setter gives you access to the previous state. That function must return the new state. This is useful when you can no longer depend on the state variable itself (i.e. inside of a `setTimeout` or `setInterval`).
 
       const [age, setAge] = useState(46);
       ...
       const onBirthday = () => {
-        setName(previousAge => previousAge + 1);
+        setAge(previousAge => previousAge + 1);
       }
 
 <a name="useeffect"></a>
@@ -76,6 +76,8 @@ The useEffect hook adds lifecycle functionality to function components
       useEffect(() => {
         document.title = title;   // this will run only when 'title' has changed
       }, [title]);
+
+- If you pass multiple dependecies, the effect will run when one dependency changes
 
 - You can pass an empty array `[]` as the second parameter if you want the effect to run only once (similar to the `ComponentDidMount` method in class components)
 
